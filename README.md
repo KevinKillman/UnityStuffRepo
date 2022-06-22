@@ -1,4 +1,11 @@
 # UnityStuffRepo
+
+Select the My Project (1) folder in the Unity Hub.
+
+![image](https://user-images.githubusercontent.com/24886689/174933254-85e14453-8fa4-44e8-8e5d-d204884c93de.png)
+
+
+<h2>Gameplay</h2>
  
 The movement of the ball is not relative to the camera.
 
