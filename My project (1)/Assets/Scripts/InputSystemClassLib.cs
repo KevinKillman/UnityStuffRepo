@@ -14,9 +14,10 @@ public class InputSystemClassLib : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext context)
     {
-        if ( context.performed )
+        if ( context.performed && GetComponent<PlayerController>().jumped == false)
         {
             rb.AddForce(Vector3.up*5f, ForceMode.Impulse);
+            GetComponent<PlayerController>().jumped = true;
         }
     }
 }

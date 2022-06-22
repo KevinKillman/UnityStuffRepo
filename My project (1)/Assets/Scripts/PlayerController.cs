@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private float drag = 1f;
     private float maxSpeed=12f;
     private float maxAccel;
-
+    public bool jumped = false;
 
 
     // Start is called before the first frame update
@@ -77,6 +77,7 @@ public class PlayerController : MonoBehaviour
             var surface = other.gameObject.GetComponent<ISurface>();
             speedMod = surface.SpeedMod;
             drag = surface.Drag;
+            jumped = false;
         }
         if (other.gameObject.CompareTag("Death") )
         {

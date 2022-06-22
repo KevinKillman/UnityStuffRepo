@@ -25,8 +25,8 @@ public class PistonInnerPlateTrigger : MonoBehaviour, IPistonTriggerAction
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        if (rb.transform.position.x <= outerPlateOriginalPosition.x )
+        var diff = Vector3.Distance(rb.transform.position, outerPlateOriginalPosition);
+        if (Math.Abs(diff)<=.1)
         {
             ResetPistonComponents();
         }
